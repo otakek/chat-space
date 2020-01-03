@@ -47,6 +47,12 @@ Things you may want to cover:
 |user_id|integer|null: false, foreign_key: true|
 |chat_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
+## chats_groupsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|chat_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 
 ## groups_usersテーブル
 

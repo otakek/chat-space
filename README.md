@@ -22,6 +22,14 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+## usersテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|id|bigint|null: false, unique: true|
+|nickname|string|null: false, unique: true|
+|email|string|null: false, unique: true|
+|password|string|null: false, unique: true|
 ## groups_usersテーブル
 
 |Column|Type|Options|

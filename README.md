@@ -70,4 +70,3 @@ Things you may want to cover:
 
 1. belongs_to :user
 2. belongs_to :group
-

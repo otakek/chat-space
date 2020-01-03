@@ -26,40 +26,42 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|id|bigint|null: false, unique: true|
-|nickname|string|null: false, unique: true|
+|nickname|string|null: false, unique: true, index: true|
 |email|string|null: false, unique: true|
 |password|string|null: false, unique: true|
+
+### Association
+- belongs_to :group
+- belongs_to :chat
+
 ## chatテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|id|bigint|null: false, unique: true|
-|image|string|null: false|
-|text|text|null: false|
-|group_id|integer|null: false, foreign_key: true|
-|user_id|integer|null: false, foreign_key: true|
+|image|string|
+|text|text|
+|group|references|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
+
+### Association
+- belongs_to :group
+
 ## groupテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|id|bigint|null: false, unique: true|
-|user_id|integer|null: false, foreign_key: true|
-|chat_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
-## chats_groupsテーブル
+|name|string|null: false|
 
-|Column|Type|Options|
-|------|----|-------|
-|chat_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :user
+- belongs_to :chat
 
 ## groups_usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group

@@ -22,7 +22,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
-## usersテーブル
+## userテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -30,6 +30,24 @@ Things you may want to cover:
 |nickname|string|null: false, unique: true|
 |email|string|null: false, unique: true|
 |password|string|null: false, unique: true|
+## chatテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|id|bigint|null: false, unique: true|
+|image|string|null: false|
+|text|text|null: false|
+|group_id|integer|null: false, foreign_key: true|
+|user_id|integer|null: false, foreign_key: true|
+## groupテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|id|bigint|null: false, unique: true|
+|user_id|integer|null: false, foreign_key: true|
+|chat_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+
 ## groups_usersテーブル
 
 |Column|Type|Options|

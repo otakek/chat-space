@@ -5,8 +5,10 @@
 @import "config/reset";
 @import "config/colors";
 @import "modules/flash";
+@import "group";
 @import "mixins/vendor_prefix";
 @import "modules/side_bar";
 @import "modules/chat";
 @import "modules/user";
 @import "messages/messages.scss";
+

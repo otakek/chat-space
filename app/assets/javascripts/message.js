@@ -67,7 +67,7 @@ $(function(){
       contentType: false
     })
     .done(function(data){
-      console.log("OK");
+      //console.log("OK");
       var html = buildHTML(data);
       $('.messages').append(html);      
       $('form')[0].reset();
@@ -106,7 +106,7 @@ $(function(){
       }
     })
     .fail(function() {
-      console.log('error');
+      alert.log('error');
     });
   };
   if (document.location.href.match(/\/groups\/\d+\/messages/)) {
